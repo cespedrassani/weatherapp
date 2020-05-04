@@ -1,5 +1,5 @@
-No diretório do projeto, execute:
+No local aonde você deseja salvar o projeto, execute:
 
-###### ```yarn && yarn start```
+###### ```git clone https://github.com/cespedrassani/weather_app.git && cd weather_app && yarn && yarn start```
 
 Caso o navegador não abra sozinho, acesse: [http://localhost:3000](http://localhost:3000).
