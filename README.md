@@ -1,4 +1,4 @@
-No local aonde você salvar o projeto, execute:
+No local aonde você deseja salvar o projeto, execute:
 
 ###### ```git clone https://github.com/cespedrassani/weather_app.git && cd weather_app && yarn && yarn start```
 
