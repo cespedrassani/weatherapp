@@ -28,13 +28,14 @@ class App extends Component {
   getLocalStorage = () => {
     const expiresIn = window.localStorage.getItem('expiresIn');
     const weather = window.localStorage.getItem('weather');
-    if (expiresIn && new Date(parseInt(expiresIn, 10)) > new Date(Date.now())){
-      const city = window.localStorage.getItem('city');     
-      this.setState({
-        city,
-        weather: weather ? JSON.parse(weather) : null,
-      })
-    } else if (weather) {
+    const city = window.localStorage.getItem('city');     
+    
+    this.setState({
+      city: city ? city : '',
+      weather: weather ? JSON.parse(weather) : null,
+    })
+
+    if (!expiresIn && new Date(parseInt(expiresIn, 10)) < new Date(Date.now())){
       this.getWeatherByCoordinates(weather);
     }
   }
